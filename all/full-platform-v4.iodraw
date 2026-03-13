@@ -181,7 +181,7 @@
         <mxCell id="e-node-db2" value="所有Pod连接" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#b85450;fontSize=10;" parent="right-bg" source="node-group" target="redis" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="cross-compute" value="算力调用" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#d6b656;fontColor=#d6b656;fontSize=11;strokeWidth=3;" parent="1" source="api" target="vip" edge="1">
+        <mxCell id="cross-compute" value="算力调用" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#d6b656;fontColor=#d6b656;fontSize=13;strokeWidth=3;" parent="1" source="api" target="vip" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="900" y="1050" />
