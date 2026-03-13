@@ -91,19 +91,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-31" value="&lt;b&gt;外部智能平台&lt;/b&gt;&lt;br&gt;通过 VIP 接入算力" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=0;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="430" y="30" width="200" height="50" as="geometry" />
+          <mxGeometry x="1560" y="59" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-32" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="5Q9zQ33Rc9CSvlmBtXP2-31" target="5Q9zQ33Rc9CSvlmBtXP2-33">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-33" value="&lt;b&gt;Keepalived VIP（10.*.*.15） · 统一对外入口&lt;/b&gt;&lt;br&gt;VRRP 故障自动漂移" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="380" y="120" width="300" height="50" as="geometry" />
+          <mxGeometry x="1510" y="149" width="300" height="50" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-34" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="5Q9zQ33Rc9CSvlmBtXP2-33" target="5Q9zQ33Rc9CSvlmBtXP2-35">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-35" value="&lt;b&gt;HAProxy · 负载均衡&lt;/b&gt;&lt;br&gt;轮询分发到三台 LiteLLM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="380" y="210" width="300" height="50" as="geometry" />
+          <mxGeometry x="1510" y="239" width="300" height="50" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-36" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="5Q9zQ33Rc9CSvlmBtXP2-35" target="5Q9zQ33Rc9CSvlmBtXP2-39">
           <mxGeometry relative="1" as="geometry" />
@@ -115,16 +115,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-39" value="&lt;b&gt;10.*.*.30 泰山&lt;/b&gt;&lt;br&gt;LiteLLM&lt;br&gt;Keepalived MASTER&lt;br&gt;HAProxy&lt;br&gt;Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="70" y="310" width="200" height="110" as="geometry" />
+          <mxGeometry x="1200" y="339" width="200" height="110" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-40" value="&lt;b&gt;10.*.*.31&amp;nbsp;&lt;/b&gt;&lt;b&gt;泰山&lt;/b&gt;&lt;br&gt;LiteLLM&lt;br&gt;Keepalived BACKUP1&lt;br&gt;HAProxy&lt;br&gt;Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="430" y="310" width="200" height="110" as="geometry" />
+          <mxGeometry x="1560" y="339" width="200" height="110" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-41" value="&lt;b&gt;10.*.*.32&lt;/b&gt;&lt;b&gt;&amp;nbsp;泰山&lt;/b&gt;&lt;br&gt;LiteLLM&lt;br&gt;Keepalived BACKUP2&lt;br&gt;HAProxy&lt;br&gt;Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="790" y="310" width="200" height="110" as="geometry" />
+          <mxGeometry x="1920" y="339" width="200" height="110" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-42" value="ES 集群 · 三节点 · 存储 MCP 图片 / 知识库文档" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="310" y="435" width="440" height="30" as="geometry" />
+          <mxGeometry x="1440" y="464" width="440" height="30" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-43" style="edgeStyle=orthogonalEdgeStyle;dashed=1;" edge="1" parent="1" source="5Q9zQ33Rc9CSvlmBtXP2-39" target="5Q9zQ33Rc9CSvlmBtXP2-40">
           <mxGeometry relative="1" as="geometry" />
@@ -133,7 +133,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-45" value="&lt;b&gt;LiteLLM 按 model 路由到后端模型openAPI&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="380" y="480" width="300" height="40" as="geometry" />
+          <mxGeometry x="1510" y="509" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-46" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="5Q9zQ33Rc9CSvlmBtXP2-39" target="5Q9zQ33Rc9CSvlmBtXP2-45">
           <mxGeometry relative="1" as="geometry" />
@@ -157,16 +157,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-53" value="&lt;b&gt;172.*.*.62&lt;/b&gt;&lt;br&gt;P800 × 8&lt;br&gt;─────────&lt;br&gt;vLLM&lt;br&gt;─────────&lt;br&gt;DeepSeek-72B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="80" y="580" width="180" height="160" as="geometry" />
+          <mxGeometry x="1210" y="609" width="180" height="160" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-54" value="&lt;b&gt;172.*.*.69&lt;/b&gt;&lt;br&gt;P800 × 8&lt;br&gt;─────────&lt;br&gt;vLLM&lt;br&gt;─────────&lt;br&gt;Qwen3-VL-30B&lt;br&gt;Qwen3-Omni-30B&lt;br&gt;Qwen3-Next" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="320" y="580" width="180" height="160" as="geometry" />
+          <mxGeometry x="1450" y="609" width="180" height="160" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-55" value="&lt;b&gt;172.*.*.60&lt;/b&gt;&lt;br&gt;A800 × 1&lt;br&gt;─────────&lt;br&gt;vLLM&lt;br&gt;─────────&lt;br&gt;Qwen3-Coder-30B-AWQ&lt;br&gt;─────────&lt;br&gt;SQLBot · Dify · SuperSonic" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="550" y="580" width="200" height="160" as="geometry" />
+          <mxGeometry x="1680" y="609" width="200" height="160" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-56" value="&lt;b&gt;172.*.*.58&lt;/b&gt;&lt;br&gt;T4 × 8&lt;br&gt;─────────&lt;br&gt;Xinference&lt;br&gt;─────────&lt;br&gt;bge-large-zh · bge-reranker&lt;br&gt;PaddleOCR · DocAI-API&lt;br&gt;─────────&lt;br&gt;RAGFlow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="790" y="580" width="200" height="160" as="geometry" />
+          <mxGeometry x="1920" y="609" width="200" height="160" as="geometry" />
         </mxCell>
         <mxCell id="5Q9zQ33Rc9CSvlmBtXP2-57" value="" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#82b366;" edge="1" parent="1" source="5Q9zQ33Rc9CSvlmBtXP2-55" target="5Q9zQ33Rc9CSvlmBtXP2-40">
           <mxGeometry relative="1" as="geometry" />
