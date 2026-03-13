@@ -112,7 +112,7 @@
         <mxCell id="e-api-master" style="edgeStyle=orthogonalEdgeStyle;" parent="right-bg" source="api" target="master-group" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="node-group" value="&lt;b&gt;工作节点（Node × 3）· 16核 32GB · 多副本 Deploy&lt;/b&gt;" style="swimlane;startSize=28;fillColor=#f2fcf7;strokeColor=#82b366;fontSize=12;dashed=1;dashPattern=5 3;" parent="right-bg" vertex="1">
+        <mxCell id="node-group" value="工作节点（Node × 3）· 16核 32GB · 多副本 Deploy&lt;/b&gt;" style="swimlane;startSize=28;fillColor=#f2fcf7;strokeColor=#82b366;fontSize=12;dashed=1;dashPattern=5 3;" parent="right-bg" vertex="1">
           <mxGeometry x="30" y="400" width="1140" height="500" as="geometry" />
         </mxCell>
         <mxCell id="node1" value="&lt;b&gt;Node 1&lt;/b&gt;" style="swimlane;startSize=24;fillColor=#e8f8f1;strokeColor=#82b366;fontSize=12;" parent="node-group" vertex="1">
