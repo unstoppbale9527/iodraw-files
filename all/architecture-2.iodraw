@@ -34,7 +34,7 @@
         <mxCell id="10" value="&lt;b&gt;10.*.*.31&amp;nbsp;&lt;/b&gt;&lt;b&gt;泰山&lt;/b&gt;&lt;br&gt;LiteLLM&lt;br&gt;Keepalived BACKUP1&lt;br&gt;HAProxy&lt;br&gt;Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="420" y="300" width="200" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="12" value="&lt;b&gt;10.0.0.7 泰山&lt;/b&gt;&lt;br&gt;LiteLLM&lt;br&gt;Keepalived BACKUP2&lt;br&gt;HAProxy&lt;br&gt;Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
+        <mxCell id="12" value="&lt;b&gt;10.*.*.32&lt;/b&gt;&lt;b&gt;&amp;nbsp;泰山&lt;/b&gt;&lt;br&gt;LiteLLM&lt;br&gt;Keepalived BACKUP2&lt;br&gt;HAProxy&lt;br&gt;Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="780" y="300" width="200" height="110" as="geometry" />
         </mxCell>
         <mxCell id="13" value="ES 集群 · 三节点 · 存储 MCP 图片 / 知识库文档" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" parent="1" vertex="1">
