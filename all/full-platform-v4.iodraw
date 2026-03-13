@@ -82,8 +82,8 @@
         <mxCell id="right-bg" value="智能体开发平台 · 边缘云 TKE K8s 集群" style="swimlane;startSize=30;fillColor=#f0f7ff;strokeColor=#6c8ebf;fontColor=#333333;fontSize=14;fontStyle=1;dashed=1;dashPattern=8 4;" parent="1" vertex="1">
           <mxGeometry x="660" y="20" width="1200" height="1020" as="geometry" />
         </mxCell>
-        <mxCell id="web" value="&lt;b&gt;aion-web · LoadBalancer SVC&lt;/b&gt;&lt;br&gt;CLB 10.0.0.55 · 用户访问入口" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" parent="right-bg" vertex="1">
-          <mxGeometry x="380" y="50" width="300" height="55" as="geometry" />
+        <mxCell id="web" value="&lt;b&gt;aion-web · LoadBalancer SVC&lt;/b&gt;&lt;br&gt;CLB 10.*.*.57:20080 · 用户访问入口" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" parent="right-bg" vertex="1">
+          <mxGeometry x="380" y="50" width="300" height="60" as="geometry" />
         </mxCell>
         <mxCell id="registry" value="&lt;b&gt;TKE 镜像仓库&lt;/b&gt;&lt;br&gt;容器镜像管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="right-bg" vertex="1">
           <mxGeometry x="820" y="50" width="160" height="55" as="geometry" />
