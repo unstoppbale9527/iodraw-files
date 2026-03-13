@@ -1,0 +1,205 @@
+<mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="24.7.17">
+  <diagram id="d0dke7dcIyiAhbxbbn70" name="第 1 页">
+    <mxGraphModel dx="1687" dy="1019" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="left-bg" value="&lt;b&gt;算力平台&lt;/b&gt;" style="swimlane;startSize=30;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=14;fontStyle=1;dashed=1;dashPattern=8 4;" parent="1" vertex="1">
+          <mxGeometry x="20" y="20" width="600" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="vip" value="&lt;b&gt;Keepalived VIP · 统一对外入口&lt;/b&gt;&lt;br&gt;VRRP 故障自动漂移" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" parent="left-bg" vertex="1">
+          <mxGeometry x="140" y="50" width="320" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="haproxy" value="&lt;b&gt;HAProxy · 负载均衡&lt;/b&gt;&lt;br&gt;轮询分发到三台 LiteLLM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="left-bg" vertex="1">
+          <mxGeometry x="140" y="155" width="320" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="e-vip-ha" style="edgeStyle=orthogonalEdgeStyle;" parent="left-bg" source="vip" target="haproxy" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" value="&lt;b&gt;10.0.0.5 泰山&lt;/b&gt;&lt;br&gt;LiteLLM&lt;br&gt;Keepalived MASTER&lt;br&gt;HAProxy&lt;br&gt;Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="left-bg" vertex="1">
+          <mxGeometry x="30" y="270" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="&lt;b&gt;10.0.0.6 泰山&lt;/b&gt;&lt;br&gt;LiteLLM&lt;br&gt;Keepalived BACKUP1&lt;br&gt;HAProxy&lt;br&gt;Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="left-bg" vertex="1">
+          <mxGeometry x="220" y="270" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" value="&lt;b&gt;10.0.0.7 泰山&lt;/b&gt;&lt;br&gt;LiteLLM&lt;br&gt;Keepalived BACKUP2&lt;br&gt;HAProxy&lt;br&gt;Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="left-bg" vertex="1">
+          <mxGeometry x="410" y="270" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="e-ha-t1" style="edgeStyle=orthogonalEdgeStyle;" parent="left-bg" source="haproxy" target="t1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-ha-t2" style="edgeStyle=orthogonalEdgeStyle;" parent="left-bg" source="haproxy" target="t2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-ha-t3" style="edgeStyle=orthogonalEdgeStyle;" parent="left-bg" source="haproxy" target="t3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="es" value="ES 集群 · 三节点 · 知识库 / MCP 图片存储" style="text;html=1;align=center;fontSize=11;fontColor=#185FA5;" parent="left-bg" vertex="1">
+          <mxGeometry x="100" y="395" width="400" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="es-line1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#185FA5;" parent="left-bg" source="t1" target="t2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="es-line2" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#185FA5;" parent="left-bg" source="t2" target="t3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route" value="&lt;b&gt;LiteLLM · model 路由&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" parent="left-bg" vertex="1">
+          <mxGeometry x="140" y="440" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e-t1-r" style="edgeStyle=orthogonalEdgeStyle;" parent="left-bg" source="t1" target="route" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-t2-r" style="edgeStyle=orthogonalEdgeStyle;" parent="left-bg" source="t2" target="route" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-t3-r" style="edgeStyle=orthogonalEdgeStyle;" parent="left-bg" source="t3" target="route" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g1" value="&lt;b&gt;10.0.0.1&lt;/b&gt;&lt;br&gt;P800 × 8&lt;br&gt;─────────&lt;br&gt;vLLM&lt;br&gt;─────────&lt;br&gt;DeepSeek-72B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="left-bg" vertex="1">
+          <mxGeometry x="20" y="530" width="130" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="g2" value="&lt;b&gt;10.0.0.2&lt;/b&gt;&lt;br&gt;P800 × 8&lt;br&gt;─────────&lt;br&gt;vLLM&lt;br&gt;─────────&lt;br&gt;Qwen3-VL-30B&lt;br&gt;Qwen3-Omni-30B&lt;br&gt;Qwen3-Next" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="left-bg" vertex="1">
+          <mxGeometry x="170" y="530" width="130" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="g3" value="&lt;b&gt;10.0.0.3&lt;/b&gt;&lt;br&gt;A800 × 1&lt;br&gt;─────────&lt;br&gt;vLLM&lt;br&gt;─────────&lt;br&gt;Qwen3-Coder-30B-AWQ&lt;br&gt;─────────&lt;br&gt;SQLBot · Dify · SuperSonic" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="left-bg" vertex="1">
+          <mxGeometry x="320" y="530" width="130" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="g4" value="&lt;b&gt;10.0.0.4&lt;/b&gt;&lt;br&gt;T4 × 8&lt;br&gt;─────────&lt;br&gt;Xinference&lt;br&gt;─────────&lt;br&gt;bge-large-zh&lt;br&gt;bge-reranker&lt;br&gt;PaddleOCR · DocAI&lt;br&gt;─────────&lt;br&gt;RAGFlow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="left-bg" vertex="1">
+          <mxGeometry x="460" y="530" width="130" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="e-r-g1" style="edgeStyle=orthogonalEdgeStyle;" parent="left-bg" source="route" target="g1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-r-g2" style="edgeStyle=orthogonalEdgeStyle;" parent="left-bg" source="route" target="g2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-r-g3" style="edgeStyle=orthogonalEdgeStyle;" parent="left-bg" source="route" target="g3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-r-g4" style="edgeStyle=orthogonalEdgeStyle;" parent="left-bg" source="route" target="g4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="right-bg" value="&lt;b&gt;智能平台 · 腾讯云 TKE K8s 集群&lt;/b&gt;" style="swimlane;startSize=30;fillColor=#f0f7ff;strokeColor=#6c8ebf;fontColor=#333333;fontSize=14;fontStyle=1;dashed=1;dashPattern=8 4;" parent="1" vertex="1">
+          <mxGeometry x="660" y="20" width="1200" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="web" value="&lt;b&gt;aion-web · LoadBalancer SVC&lt;/b&gt;&lt;br&gt;CLB 10.0.0.55 · 用户访问入口" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" parent="right-bg" vertex="1">
+          <mxGeometry x="380" y="50" width="300" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="registry" value="&lt;b&gt;TKE 镜像仓库&lt;/b&gt;&lt;br&gt;容器镜像管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="right-bg" vertex="1">
+          <mxGeometry x="820" y="50" width="160" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="api" value="&lt;b&gt;aion-api · API 网关&lt;/b&gt;&lt;br&gt;鉴权 · 统一入口 · 路由分发" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="right-bg" vertex="1">
+          <mxGeometry x="380" y="155" width="300" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="e-web-api" style="edgeStyle=orthogonalEdgeStyle;" parent="right-bg" source="web" target="api" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="master-group" value="&lt;b&gt;控制节点（Master × 3）· 4核 8GB · 管控调度&lt;/b&gt;" style="swimlane;startSize=28;fillColor=#e8f4fd;strokeColor=#6c8ebf;fontSize=12;dashed=1;dashPattern=5 3;" parent="right-bg" vertex="1">
+          <mxGeometry x="30" y="260" width="1140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="&lt;b&gt;kube-apiserver&lt;/b&gt;&lt;br&gt;集群 API 入口" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="master-group" vertex="1">
+          <mxGeometry x="20" y="35" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="&lt;b&gt;etcd&lt;/b&gt;&lt;br&gt;集群状态存储" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="master-group" vertex="1">
+          <mxGeometry x="280" y="35" width="200" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="m3" value="&lt;b&gt;scheduler&lt;/b&gt;&lt;br&gt;Pod 调度" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="master-group" vertex="1">
+          <mxGeometry x="520" y="35" width="200" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="m4" value="&lt;b&gt;controller manager&lt;/b&gt;&lt;br&gt;副本控制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="master-group" vertex="1">
+          <mxGeometry x="760" y="35" width="200" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e-api-master" style="edgeStyle=orthogonalEdgeStyle;" parent="right-bg" source="api" target="master-group" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node-group" value="&lt;b&gt;工作节点（Node × 3）· 16核 32GB · 多副本 Deploy&lt;/b&gt;" style="swimlane;startSize=28;fillColor=#f2fcf7;strokeColor=#82b366;fontSize=12;dashed=1;dashPattern=5 3;" parent="right-bg" vertex="1">
+          <mxGeometry x="30" y="400" width="1140" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="node1" value="&lt;b&gt;Node 1&lt;/b&gt;" style="swimlane;startSize=24;fillColor=#e8f8f1;strokeColor=#82b366;fontSize=12;" parent="node-group" vertex="1">
+          <mxGeometry x="20" y="35" width="340" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="p-web1" value="&lt;b&gt;aion-web &lt;/b&gt; [×2]&lt;br&gt;前端服务 · LoadBalancer SVC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node1" vertex="1">
+          <mxGeometry x="15" y="35" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p-api1" value="&lt;b&gt;aion-api &lt;/b&gt; [×2]&lt;br&gt;API 网关 · 统一入口" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node1" vertex="1">
+          <mxGeometry x="15" y="100" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p-java1" value="&lt;b&gt;aion-java-tool &lt;/b&gt; [×2]&lt;br&gt;Java 工具" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node1" vertex="1">
+          <mxGeometry x="15" y="165" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p-ssrf1" value="&lt;b&gt;aion-ssrf-proxy &lt;/b&gt; [×2]&lt;br&gt;SSRF 防护" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node1" vertex="1">
+          <mxGeometry x="15" y="230" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p-log" value="&lt;b&gt;日志存储&lt;/b&gt;&lt;br&gt;Node 本地硬盘" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" parent="node1" vertex="1">
+          <mxGeometry x="15" y="295" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="node2" value="&lt;b&gt;Node 2&lt;/b&gt;" style="swimlane;startSize=24;fillColor=#e8f8f1;strokeColor=#82b366;fontSize=12;" parent="node-group" vertex="1">
+          <mxGeometry x="400" y="35" width="340" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="p-plugin2" value="&lt;b&gt;aion-plugin-daemon &lt;/b&gt; [×2]&lt;br&gt;插件管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node2" vertex="1">
+          <mxGeometry x="15" y="35" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p-sandbox2" value="&lt;b&gt;aion-sandbox &lt;/b&gt; [×2]&lt;br&gt;代码执行" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node2" vertex="1">
+          <mxGeometry x="15" y="100" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p-worker2" value="&lt;b&gt;aion-worker &lt;/b&gt; [×2]&lt;br&gt;文档解析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node2" vertex="1">
+          <mxGeometry x="15" y="165" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p-lworker2" value="&lt;b&gt;aion-long-worker &lt;/b&gt; [×2]&lt;br&gt;效果验证" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node2" vertex="1">
+          <mxGeometry x="15" y="230" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="node3" value="&lt;b&gt;Node 3&lt;/b&gt;" style="swimlane;startSize=24;fillColor=#e8f8f1;strokeColor=#82b366;fontSize=12;" parent="node-group" vertex="1">
+          <mxGeometry x="780" y="35" width="340" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="p-web3" value="&lt;b&gt;aion-web &lt;/b&gt; [×2]&lt;br&gt;前端服务" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node3" vertex="1">
+          <mxGeometry x="15" y="35" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p-api3" value="&lt;b&gt;aion-api &lt;/b&gt; [×2]&lt;br&gt;API 网关" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node3" vertex="1">
+          <mxGeometry x="15" y="100" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p-sandbox3" value="&lt;b&gt;aion-sandbox &lt;/b&gt; [×2]&lt;br&gt;代码执行" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node3" vertex="1">
+          <mxGeometry x="15" y="165" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p-plugin3" value="&lt;b&gt;aion-plugin-daemon &lt;/b&gt; [×2]&lt;br&gt;插件管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node3" vertex="1">
+          <mxGeometry x="15" y="230" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="e-master-node" style="edgeStyle=orthogonalEdgeStyle;" parent="right-bg" source="master-group" target="node-group" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="db-label" value="集群外 · 腾讯云托管数据库 · 所有 Pod 均连接" style="text;html=1;align=center;fontSize=12;fontColor=#b85450;fontStyle=1;" parent="right-bg" vertex="1">
+          <mxGeometry x="350" y="935" width="500" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="tdsql" value="&lt;b&gt;腾讯云 TDSQL&lt;/b&gt;&lt;br&gt;MySQL · 一主一从" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="right-bg" vertex="1">
+          <mxGeometry x="300" y="965" width="220" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" value="&lt;b&gt;腾讯云 Redis&lt;/b&gt;&lt;br&gt;标准架构 · 1 副本" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="right-bg" vertex="1">
+          <mxGeometry x="680" y="965" width="220" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="e-node-db1" value="所有Pod连接" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#b85450;fontSize=10;" parent="right-bg" source="node-group" target="tdsql" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-node-db2" value="所有Pod连接" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#b85450;fontSize=10;" parent="right-bg" source="node-group" target="redis" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cross-compute" value="算力调用" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#d6b656;fontColor=#d6b656;fontSize=11;strokeWidth=2;" parent="1" source="api" target="vip" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="1050" />
+              <mxPoint x="280" y="1050" />
+              <mxPoint x="280" y="72" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cross-es" value="ES 存储" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#6c8ebf;fontColor=#6c8ebf;fontSize=11;strokeWidth=2;" parent="1" source="p-worker2" target="t2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1220" y="1070" />
+              <mxPoint x="200" y="1070" />
+              <mxPoint x="200" y="325" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
