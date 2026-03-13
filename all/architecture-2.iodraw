@@ -76,7 +76,7 @@
         <mxCell id="23" value="&lt;b&gt;10.0.0.2&lt;/b&gt;&lt;br&gt;P800 × 8&lt;br&gt;─────────&lt;br&gt;vLLM&lt;br&gt;─────────&lt;br&gt;Qwen3-VL-30B&lt;br&gt;Qwen3-Omni-30B&lt;br&gt;Qwen3-Next" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="310" y="570" width="180" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="25" value="&lt;b&gt;10.0.0.3&lt;/b&gt;&lt;br&gt;A800 × 1&lt;br&gt;─────────&lt;br&gt;vLLM&lt;br&gt;─────────&lt;br&gt;Qwen3-Coder-30B-AWQ&lt;br&gt;─────────&lt;br&gt;SQLBot · Dify · SuperSonic&lt;br&gt;&lt;i&gt;内网调用 LiteLLM&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
+        <mxCell id="25" value="&lt;b&gt;10.0.0.3&lt;/b&gt;&lt;br&gt;A800 × 1&lt;br&gt;─────────&lt;br&gt;vLLM&lt;br&gt;─────────&lt;br&gt;Qwen3-Coder-30B-AWQ&lt;br&gt;─────────&lt;br&gt;SQLBot · Dify · SuperSonic" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="540" y="570" width="200" height="160" as="geometry" />
         </mxCell>
         <mxCell id="27" value="&lt;b&gt;10.0.0.4&lt;/b&gt;&lt;br&gt;T4 × 8&lt;br&gt;─────────&lt;br&gt;Xinference&lt;br&gt;─────────&lt;br&gt;bge-large-zh · bge-reranker&lt;br&gt;PaddleOCR · DocAI-API&lt;br&gt;─────────&lt;br&gt;RAGFlow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
