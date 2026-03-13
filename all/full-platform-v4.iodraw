@@ -94,7 +94,7 @@
         <mxCell id="e-web-api" style="edgeStyle=orthogonalEdgeStyle;" parent="right-bg" source="web" target="api" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="master-group" value="&lt;b&gt;控制节点（Master × 3）· 4核 8GB · 管控调度&lt;/b&gt;" style="swimlane;startSize=28;fillColor=#e8f4fd;strokeColor=#6c8ebf;fontSize=12;dashed=1;dashPattern=5 3;" parent="right-bg" vertex="1">
+        <mxCell id="master-group" value="控制节点（Master × 3）· 4核 8GB · 管控调度" style="swimlane;startSize=28;fillColor=#e8f4fd;strokeColor=#6c8ebf;fontSize=12;dashed=1;dashPattern=5 3;" parent="right-bg" vertex="1">
           <mxGeometry x="30" y="260" width="1140" height="90" as="geometry" />
         </mxCell>
         <mxCell id="m1" value="&lt;b&gt;kube-apiserver&lt;/b&gt;&lt;br&gt;集群 API 入口" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="master-group" vertex="1">
