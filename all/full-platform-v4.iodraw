@@ -190,7 +190,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="cross-es" value="ES 存储" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#6c8ebf;fontColor=#6c8ebf;fontSize=12;strokeWidth=3;" parent="1" source="p-worker2" target="t2" edge="1">
+        <mxCell id="cross-es" value="ES 存储" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#6c8ebf;fontColor=#6c8ebf;fontSize=13;strokeWidth=3;" parent="1" source="p-worker2" target="t2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1220" y="1070" />
