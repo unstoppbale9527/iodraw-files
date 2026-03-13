@@ -1,0 +1,133 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- 客户端 -->
+    <mxCell id="2" value="&lt;b&gt;外部智能平台&lt;/b&gt;&lt;br&gt;通过 VIP 接入算力" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=0;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="420" y="20" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- 箭头 客户端→VIP -->
+    <mxCell id="3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="2" target="4" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Keepalived VIP -->
+    <mxCell id="4" value="&lt;b&gt;Keepalived VIP · 统一对外入口&lt;/b&gt;&lt;br&gt;VRRP 故障自动漂移" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="370" y="110" width="300" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- 箭头 VIP→HAProxy -->
+    <mxCell id="5" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="4" target="6" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- HAProxy -->
+    <mxCell id="6" value="&lt;b&gt;HAProxy · 负载均衡&lt;/b&gt;&lt;br&gt;轮询分发到三台 LiteLLM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="370" y="200" width="300" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- 箭头 HAProxy→LiteLLM1 -->
+    <mxCell id="7" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="6" target="8" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <!-- 箭头 HAProxy→LiteLLM2 -->
+    <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="6" target="10" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <!-- 箭头 HAProxy→LiteLLM3 -->
+    <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="6" target="12" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- LiteLLM 1 -->
+    <mxCell id="8" value="&lt;b&gt;10.0.0.5 泰山&lt;/b&gt;&lt;br&gt;LiteLLM&lt;br&gt;Keepalived MASTER&lt;br&gt;HAProxy&lt;br&gt;Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="60" y="300" width="200" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- LiteLLM 2 -->
+    <mxCell id="10" value="&lt;b&gt;10.0.0.6 泰山&lt;/b&gt;&lt;br&gt;LiteLLM&lt;br&gt;Keepalived BACKUP1&lt;br&gt;HAProxy&lt;br&gt;Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="420" y="300" width="200" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- LiteLLM 3 -->
+    <mxCell id="12" value="&lt;b&gt;10.0.0.7 泰山&lt;/b&gt;&lt;br&gt;LiteLLM&lt;br&gt;Keepalived BACKUP2&lt;br&gt;HAProxy&lt;br&gt;Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="780" y="300" width="200" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- ES集群说明 -->
+    <mxCell id="13" value="ES 集群 · 三节点 · 存储 MCP 图片 / 知识库文档" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="300" y="425" width="440" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- ES连线 -->
+    <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;dashed=1;" edge="1" source="8" target="10" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;dashed=1;" edge="1" source="10" target="12" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- 路由说明 -->
+    <mxCell id="16" value="&lt;b&gt;LiteLLM 按 model 路由到后端&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="370" y="470" width="300" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- 箭头 LiteLLM→路由 -->
+    <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="8" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="10" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="12" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- 箭头 路由→GPU服务器 -->
+    <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="16" target="21" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="16" target="23" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="24" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="16" target="25" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="16" target="27" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- GPU S1 -->
+    <mxCell id="21" value="&lt;b&gt;10.0.0.1&lt;/b&gt;&lt;br&gt;P800 × 8&lt;br&gt;─────────&lt;br&gt;vLLM&lt;br&gt;─────────&lt;br&gt;DeepSeek-72B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="20" y="560" width="180" height="160" as="geometry" />
+    </mxCell>
+
+    <!-- GPU S2 -->
+    <mxCell id="23" value="&lt;b&gt;10.0.0.2&lt;/b&gt;&lt;br&gt;P800 × 8&lt;br&gt;─────────&lt;br&gt;vLLM&lt;br&gt;─────────&lt;br&gt;Qwen3-VL-30B&lt;br&gt;Qwen3-Omni-30B&lt;br&gt;Qwen3-Next" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="230" y="560" width="180" height="160" as="geometry" />
+    </mxCell>
+
+    <!-- GPU S3 -->
+    <mxCell id="25" value="&lt;b&gt;10.0.0.3&lt;/b&gt;&lt;br&gt;A800 × 1&lt;br&gt;─────────&lt;br&gt;vLLM&lt;br&gt;─────────&lt;br&gt;Qwen3-Coder-30B-AWQ&lt;br&gt;─────────&lt;br&gt;SQLBot · Dify · SuperSonic&lt;br&gt;&lt;i&gt;内网调用 LiteLLM&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="440" y="560" width="200" height="160" as="geometry" />
+    </mxCell>
+
+    <!-- GPU S4 -->
+    <mxCell id="27" value="&lt;b&gt;10.0.0.4&lt;/b&gt;&lt;br&gt;T4 × 8&lt;br&gt;─────────&lt;br&gt;Xinference&lt;br&gt;─────────&lt;br&gt;bge-large-zh · bge-reranker&lt;br&gt;PaddleOCR · DocAI-API&lt;br&gt;─────────&lt;br&gt;RAGFlow&lt;br&gt;&lt;i&gt;内网调用 LiteLLM&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="670" y="560" width="200" height="160" as="geometry" />
+    </mxCell>
+
+    <!-- 内网调用虚线 S3→LiteLLM -->
+    <mxCell id="28" value="内网调用" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#82b366;" edge="1" source="25" target="10" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- 内网调用虚线 S4→LiteLLM -->
+    <mxCell id="29" value="内网调用" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#82b366;" edge="1" source="27" target="10" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
