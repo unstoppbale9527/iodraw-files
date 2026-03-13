@@ -115,8 +115,8 @@
         <mxCell id="node-group" value="工作节点（Node × 3）· 16核 32GB " style="swimlane;startSize=28;fillColor=#f2fcf7;strokeColor=#82b366;fontSize=12;dashed=1;dashPattern=5 3;" parent="right-bg" vertex="1">
           <mxGeometry x="30" y="400" width="1140" height="500" as="geometry" />
         </mxCell>
-        <mxCell id="node1" value="&lt;b&gt;Node 1&lt;/b&gt;" style="swimlane;startSize=24;fillColor=#e8f8f1;strokeColor=#82b366;fontSize=12;" parent="node-group" vertex="1">
-          <mxGeometry x="20" y="35" width="340" height="450" as="geometry" />
+        <mxCell id="node1" value="Node 1" style="swimlane;startSize=24;fillColor=#e8f8f1;strokeColor=#82b366;fontSize=12;" parent="node-group" vertex="1">
+          <mxGeometry x="10" y="35" width="340" height="450" as="geometry" />
         </mxCell>
         <mxCell id="p-web1" value="&lt;b&gt;aion-web &lt;/b&gt; [×2]&lt;br&gt;前端服务 · LoadBalancer SVC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node1" vertex="1">
           <mxGeometry x="15" y="35" width="310" height="50" as="geometry" />
