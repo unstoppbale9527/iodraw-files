@@ -79,7 +79,7 @@
         <mxCell id="e-r-g4" style="edgeStyle=orthogonalEdgeStyle;" parent="left-bg" source="route" target="g4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="right-bg" value="智能平台 · 边缘云 TKE K8s 集群" style="swimlane;startSize=30;fillColor=#f0f7ff;strokeColor=#6c8ebf;fontColor=#333333;fontSize=14;fontStyle=1;dashed=1;dashPattern=8 4;" parent="1" vertex="1">
+        <mxCell id="right-bg" value="智能体开发平台 · 边缘云 TKE K8s 集群" style="swimlane;startSize=30;fillColor=#f0f7ff;strokeColor=#6c8ebf;fontColor=#333333;fontSize=14;fontStyle=1;dashed=1;dashPattern=8 4;" parent="1" vertex="1">
           <mxGeometry x="660" y="20" width="1200" height="1020" as="geometry" />
         </mxCell>
         <mxCell id="web" value="&lt;b&gt;aion-web · LoadBalancer SVC&lt;/b&gt;&lt;br&gt;CLB 10.0.0.55 · 用户访问入口" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" parent="right-bg" vertex="1">
