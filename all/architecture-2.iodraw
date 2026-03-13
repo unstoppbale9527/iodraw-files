@@ -91,7 +91,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="29" value="内网调用" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#82b366;" parent="1" source="27" target="10" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry x="0.04" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
