@@ -148,7 +148,7 @@
         <mxCell id="p-lworker2" value="&lt;b&gt;aion-long-worker &lt;/b&gt; [×2]&lt;br&gt;效果验证" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node2" vertex="1">
           <mxGeometry x="15" y="230" width="310" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="node3" value="&lt;b&gt;Node 3&lt;/b&gt;" style="swimlane;startSize=24;fillColor=#e8f8f1;strokeColor=#82b366;fontSize=12;" parent="node-group" vertex="1">
+        <mxCell id="node3" value="Node 3" style="swimlane;startSize=24;fillColor=#e8f8f1;strokeColor=#82b366;fontSize=12;" parent="node-group" vertex="1">
           <mxGeometry x="780" y="35" width="340" height="450" as="geometry" />
         </mxCell>
         <mxCell id="p-web3" value="&lt;b&gt;aion-web &lt;/b&gt; [×2]&lt;br&gt;前端服务" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="node3" vertex="1">
