@@ -10,7 +10,7 @@
         <mxCell id="3" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="2" target="4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4" value="&lt;b&gt;Keepalived VIP（10.*.*.33） · 统一对外入口&lt;/b&gt;&lt;br&gt;VRRP 故障自动漂移" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" parent="1" vertex="1">
+        <mxCell id="4" value="&lt;b&gt;Keepalived VIP（10.*.*.15） · 统一对外入口&lt;/b&gt;&lt;br&gt;VRRP 故障自动漂移" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="370" y="110" width="300" height="50" as="geometry" />
         </mxCell>
         <mxCell id="5" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="4" target="6" edge="1">
